@@ -1,4 +1,4 @@
-name: Deploy to GitHub Pages
+name: Deploy static export to static-site branch
 
 on:
   push:
@@ -28,8 +28,9 @@ jobs:
       - name: Export static site
         run: pnpm run export
 
-      - name: Deploy to GitHub Pages
+      - name: Deploy to static-site branch
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./out
+          publish_branch: static-site
