@@ -34,7 +34,7 @@ const QuoteSection = () => {
               className="text-center md:text-left"
             >
               <p className="font-serif text-2xl md:text-3xl lg:text-4xl leading-tight tracking-tight text-gray-800">
-                "Simplicity is the keynote of all true elegance."
+                &quot;Simplicity is the keynote of all true elegance.&quot;
               </p>
               <footer className="mt-4 text-gray-500 text-base md:text-lg font-light">
                 — Coco Chanel
