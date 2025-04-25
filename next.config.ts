@@ -6,7 +6,7 @@ const nextConfig: NextConfig = {
     // Add a rule to handle .mjs files
     config.module.rules.push({
       test: /\.mjs$/,
-      type: 'javascript/auto',
+      type: "javascript/auto",
     });
     return config;
   },
