@@ -1,38 +1,38 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Geist Sans'; /* Name der Schriftart */
-  src: url('/fonts/Geist-VariableFont_wght.ttf') format('truetype'); /* Pfad zur Schriftart */
+  font-family: "Geist Sans"; /* Name der Schriftart */
+  src: url("/fonts/Geist-VariableFont_wght.ttf") format("truetype"); /* Pfad zur Schriftart */
   font-weight: 100 900; /* Bereich der Gewichtungen (optional) */
   font-display: swap; /* Zeigt Schrift sofort an und wechselt später zur geladenen Schrift */
 }
 
 @font-face {
-  font-family: 'Raleway';
-  src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-family: "Raleway";
+  src: url("/fonts/Raleway-VariableFont_wght.ttf") format("truetype");
   font-weight: 700;
   font-display: swap;
 }
 
 /* Farbpalette */
 :root {
-  --color-primary: #007AFF; /* Akzentblau */
-  --color-background: #FFFFFF; /* Weiß */
+  --color-primary: #007aff; /* Akzentblau */
+  --color-background: #ffffff; /* Weiß */
   --color-text: #000000; /* Schwarz */
-  --color-secondary: #F5F5F5; /* Sekundärfarbe für Hintergründe */
+  --color-secondary: #f5f5f5; /* Sekundärfarbe für Hintergründe */
   --color-nav-link: #333333; /* Dunkelgrau für Navigation */
   --color-nav-link-hover: #666666; /* Helleres Grau für Navigation Hover */
 }
 
 /* Basis-Stile */
 html {
-  font-family: 'Geist Sans', sans-serif;
+  font-family: "Geist Sans", sans-serif;
 }
 
 body {
   background-color: var(--color-background);
   color: var(--color-text);
-  font-family: 'Geist Sans', sans-serif;
+  font-family: "Geist Sans", sans-serif;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -67,7 +67,8 @@ nav a:hover {
 
 /* Animation Utilities */
 @keyframes float {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -100,7 +101,7 @@ nav a:hover {
 @media (prefers-color-scheme: dark) {
   :root {
     --color-background: #000000; /* Schwarz für den Hintergrund im Dark Mode */
-    --color-text: #FFFFFF; /* Weiß für den Text im Dark Mode */
+    --color-text: #ffffff; /* Weiß für den Text im Dark Mode */
     --color-secondary: #333333; /* Dunklere Sekundärfarbe */
   }
 }
