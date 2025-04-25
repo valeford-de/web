@@ -36,22 +36,6 @@ body {
   box-sizing: inherit;
 }
 
-/* Standard-Button-Stile */
-button {
-  background-color: var(--color-primary);
-  color: var(--color-background);
-  border: none;
-  padding: 0.75rem 1.5rem;
-  font-size: 1rem;
-  border-radius: 0.375rem; /* Tailwind Standard */
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-button:hover {
-  background-color: #005F8C; /* Dunklerer Blauton für Hover */
-}
-
 /* Link-Stile */
 a {
   color: var(--color-primary);
@@ -60,6 +44,37 @@ a {
 
 a:hover {
   text-decoration: underline;
+}
+
+/* Animation Utilities */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+@keyframes gradientFlow {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.animate-gradient {
+  background-size: 200% auto;
+  animation: gradientFlow 2.5s ease-in-out infinite;
 }
 
 /* Dark Mode (optional) */
