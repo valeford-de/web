@@ -7,12 +7,21 @@
   font-display: swap; /* Zeigt Schrift sofort an und wechselt später zur geladenen Schrift */
 }
 
+@font-face {
+  font-family: 'Raleway';
+  src: url('/fonts/Raleway-VariableFont_wght.ttf') format('truetype');
+  font-weight: 700;
+  font-display: swap;
+}
+
 /* Farbpalette */
 :root {
   --color-primary: #007AFF; /* Akzentblau */
   --color-background: #FFFFFF; /* Weiß */
   --color-text: #000000; /* Schwarz */
   --color-secondary: #F5F5F5; /* Sekundärfarbe für Hintergründe */
+  --color-nav-link: #333333; /* Dunkelgrau für Navigation */
+  --color-nav-link-hover: #666666; /* Helleres Grau für Navigation Hover */
 }
 
 /* Basis-Stile */
@@ -42,8 +51,18 @@ a {
   text-decoration: none;
 }
 
+/* Allow navigation links to override the default styles */
+nav a {
+  color: inherit;
+}
+
 a:hover {
   text-decoration: underline;
+}
+
+/* But navigation links should never get underlines */
+nav a:hover {
+  text-decoration: none;
 }
 
 /* Animation Utilities */

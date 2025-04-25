@@ -1,0 +1,40 @@
+.logo {
+  text-decoration: none !important;
+}
+
+.logo:hover {
+  text-decoration: none !important;
+}
+
+.navLink {
+  color: #666666 !important;
+  font-size: 0.85rem; /* Reduced from 0.95rem */
+  text-decoration: none !important;
+  transition: color 0.2s ease;
+  font-weight: 400;
+  padding: 0.25rem 0;
+}
+
+/* Mobile navigation links can be slightly larger */
+@media (max-width: 768px) {
+  .navLink {
+    font-size: 0.95rem;
+    padding: 0.5rem 0;
+  }
+}
+
+.navLink:hover {
+  color: #999999 !important;
+  text-decoration: none !important;
+}
+
+/* Add padding utility class for page content to prevent navigation overlap */
+.contentPadding {
+  padding-top: 5rem; /* Provides enough space for the navigation bar on mobile */
+}
+
+@media (min-width: 768px) {
+  .contentPadding {
+    padding-top: 3rem; /* Reduced padding on desktop for better visual appearance */
+  }
+}
