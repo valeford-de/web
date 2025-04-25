@@ -38,3 +38,15 @@
     padding-top: 3rem; /* Reduced padding on desktop for better visual appearance */
   }
 }
+
+/* Mobile menu animation and styling */
+.mobileMenuOverlay {
+  background-color: rgba(255, 255, 255, 0.85); /* More transparent white */
+  backdrop-filter: blur(10px); /* Add blur effect similar to scrolled nav */
+  -webkit-backdrop-filter: blur(10px); /* Safari support */
+}
+
+/* Menu item animation for staggered entry */
+.menuItem {
+  transform-origin: center;
+}
