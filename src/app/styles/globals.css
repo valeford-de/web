@@ -1,0 +1,72 @@
+@import "tailwindcss";
+
+@font-face {
+  font-family: 'Geist Sans'; /* Name der Schriftart */
+  src: url('/fonts/Geist-VariableFont_wght.ttf') format('truetype'); /* Pfad zur Schriftart */
+  font-weight: 100 900; /* Bereich der Gewichtungen (optional) */
+  font-display: swap; /* Zeigt Schrift sofort an und wechselt später zur geladenen Schrift */
+}
+
+/* Farbpalette */
+:root {
+  --color-primary: #007AFF; /* Akzentblau */
+  --color-background: #FFFFFF; /* Weiß */
+  --color-text: #000000; /* Schwarz */
+  --color-secondary: #F5F5F5; /* Sekundärfarbe für Hintergründe */
+}
+
+/* Basis-Stile */
+html {
+  font-family: 'Geist Sans', sans-serif;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-text);
+  font-family: 'Geist Sans', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Tailwind Standardstile überschreiben (Optional) */
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+/* Standard-Button-Stile */
+button {
+  background-color: var(--color-primary);
+  color: var(--color-background);
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  border-radius: 0.375rem; /* Tailwind Standard */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #005F8C; /* Dunklerer Blauton für Hover */
+}
+
+/* Link-Stile */
+a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* Dark Mode (optional) */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #000000; /* Schwarz für den Hintergrund im Dark Mode */
+    --color-text: #FFFFFF; /* Weiß für den Text im Dark Mode */
+    --color-secondary: #333333; /* Dunklere Sekundärfarbe */
+  }
+}
