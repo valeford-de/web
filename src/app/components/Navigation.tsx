@@ -44,7 +44,7 @@ const Navigation = () => {
       opacity: 0,
       y: -20,
     },
-    visible: (custom) => ({
+    visible: (custom: number) => ({
       opacity: 1,
       y: 0,
       transition: { 
