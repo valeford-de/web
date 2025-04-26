@@ -25,7 +25,7 @@ const OurApproach = () => {
     <section className="relative bg-white py-20 md:py-28">
       {/* Subtle background - simplified from gradient to lighter solid color */}
       <div className="absolute w-full h-full top-0 left-0 bg-gray-50/70"></div>
-      
+
       <div className="container relative z-10 px-6 md:px-8 mx-auto">
         <div className="w-full max-w-5xl mx-auto text-center">
           {/* Minimal blue accent line */}
@@ -57,7 +57,7 @@ const OurApproach = () => {
           >
             Fast. Focused. Scalable.
           </motion.h2>
-          
+
           {/* Cleaner card layout with more minimal styling */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">
             {approachPoints.map((point, index) => (
