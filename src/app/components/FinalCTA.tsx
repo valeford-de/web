@@ -16,7 +16,7 @@ const FinalCTA = () => {
             transition={{ duration: 0.8 }}
             className="h-[2px] bg-blue-500 mb-6 mx-auto"
           ></motion.div>
-          
+
           {/* Headline */}
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -27,7 +27,7 @@ const FinalCTA = () => {
           >
             Let&apos;s build something that matters.
           </motion.h2>
-          
+
           {/* Paragraph */}
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -38,7 +38,7 @@ const FinalCTA = () => {
           >
             We&apos;re open to collaborations, pitches, and smart ideas.
           </motion.p>
-          
+
           {/* Button */}
           <motion.div
             initial={{ opacity: 0, y: 20 }}
