@@ -45,7 +45,7 @@ const TechStack = () => {
           >
             Built with the best tools.
           </motion.h2>
-          
+
           {/* Technologies grid */}
           <div className="flex flex-wrap justify-center items-center gap-8 md:gap-12 mt-10">
             {technologies.map((tech, index) => (
@@ -55,9 +55,9 @@ const TechStack = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
-                whileHover={{ 
+                whileHover={{
                   scale: 1.05,
-                  opacity: 0.85
+                  opacity: 0.85,
                 }}
                 className="flex items-center justify-center transition-all duration-300 ease-in-out"
               >

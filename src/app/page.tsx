@@ -17,7 +17,7 @@ export default function Home() {
       <TechStack />
       <FinalCTA />
       <Footer />
-      
+
       <div className="p-8 sm:p-20">{/* Additional content can go here */}</div>
     </div>
   );

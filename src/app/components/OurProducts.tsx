@@ -6,19 +6,20 @@ const OurProducts = () => {
   const products = [
     {
       name: "GradeTrack",
-      description: "GradeTrack is a modern app for tracking academic grades and progress",
-      tag: "In Development"
+      description:
+        "GradeTrack is a modern app for tracking academic grades and progress",
+      tag: "In Development",
     },
     {
       name: "Lorem ipsum",
       description: "Personalized health tracking with AI insights",
-      tag: "Coming Soon"
+      tag: "Coming Soon",
     },
     {
       name: "Lorem ipsum",
       description: "Minimal task manager for focused productivity",
-      tag: ""
-    }
+      tag: "",
+    },
   ];
 
   return (
@@ -54,7 +55,7 @@ const OurProducts = () => {
           >
             What We Build
           </motion.h2>
-          
+
           {/* Product grid */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-8">
             {products.map((product, index) => (
@@ -64,10 +65,11 @@ const OurProducts = () => {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.5, delay: 0.1 + index * 0.05 }}
-                whileHover={{ 
-                  y: -5, 
-                  boxShadow: "0 4px 20px -3px rgba(0,0,0,0.05), 0 4px 12px -3px rgba(0,0,0,0.03)",
-                  borderColor: "#e5e7eb"
+                whileHover={{
+                  y: -5,
+                  boxShadow:
+                    "0 4px 20px -3px rgba(0,0,0,0.05), 0 4px 12px -3px rgba(0,0,0,0.03)",
+                  borderColor: "#e5e7eb",
                 }}
                 className="bg-white p-8 rounded-lg shadow-[0_2px_15px_-3px_rgba(0,0,0,0.03),0_2px_8px_-3px_rgba(0,0,0,0.01)] border border-gray-100 transition-all duration-300 ease-in-out relative flex flex-col h-full"
               >
