@@ -1,12 +1,14 @@
 "use client";
-import React from 'react';
-import { motion } from 'framer-motion';
-import ContactForm from '../components/ContactForm';
-import styles from '../styles/navigation.module.css';
+import React from "react";
+import { motion } from "framer-motion";
+import ContactForm from "../components/ContactForm";
+import styles from "../styles/navigation.module.css";
 
 export default function WorkWithUs() {
   return (
-    <div className={`min-h-screen font-[family-name:var(--font-geist-sans)] ${styles.contentPadding}`}>
+    <div
+      className={`min-h-screen font-[family-name:var(--font-geist-sans)] ${styles.contentPadding}`}
+    >
       {/* Hero Section */}
       <section className="w-full bg-white py-16 md:py-24">
         <div className="container mx-auto px-6 md:px-8">
@@ -18,7 +20,7 @@ export default function WorkWithUs() {
               transition={{ duration: 0.8, delay: 0.2 }}
               className="h-[2px] bg-blue-500 mb-4 mx-auto"
             ></motion.div>
-            
+
             {/* Heading */}
             <motion.h1
               initial={{ opacity: 0, y: 20 }}
@@ -28,7 +30,7 @@ export default function WorkWithUs() {
             >
               Work With Us
             </motion.h1>
-            
+
             {/* Description */}
             <motion.p
               initial={{ opacity: 0, y: 20 }}
@@ -36,12 +38,14 @@ export default function WorkWithUs() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-gray-500 text-base md:text-lg mb-12 leading-relaxed"
             >
-              We&apos;re open to collaborations, partnerships, and app pitches. If you have an idea or project you&apos;d like to discuss, we&apos;d love to hear from you.
+              We&apos;re open to collaborations, partnerships, and app pitches.
+              If you have an idea or project you&apos;d like to discuss,
+              we&apos;d love to hear from you.
             </motion.p>
           </div>
         </div>
       </section>
-      
+
       {/* Contact Form Section */}
       <section className="w-full bg-white py-10 md:py-16">
         <div className="container mx-auto px-6 md:px-8">
