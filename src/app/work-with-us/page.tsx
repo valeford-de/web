@@ -36,7 +36,7 @@ export default function WorkWithUs() {
               transition={{ duration: 0.6, delay: 0.6 }}
               className="text-gray-500 text-base md:text-lg mb-12 leading-relaxed"
             >
-              We're open to collaborations, partnerships, and app pitches. If you have an idea or project you'd like to discuss, we'd love to hear from you.
+              We&apos;re open to collaborations, partnerships, and app pitches. If you have an idea or project you&apos;d like to discuss, we&apos;d love to hear from you.
             </motion.p>
           </div>
         </div>

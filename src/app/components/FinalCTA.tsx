@@ -25,7 +25,7 @@ const FinalCTA = () => {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="font-medium text-4xl md:text-5xl leading-tight tracking-tight mb-5"
           >
-            Let's build something that matters.
+            Let&apos;s build something that matters.
           </motion.h2>
           
           {/* Paragraph */}
@@ -36,7 +36,7 @@ const FinalCTA = () => {
             transition={{ duration: 0.6, delay: 0.4 }}
             className="text-gray-500 text-base md:text-lg mb-12 leading-relaxed"
           >
-            We're open to collaborations, pitches, and smart ideas.
+            We&apos;re open to collaborations, pitches, and smart ideas.
           </motion.p>
           
           {/* Button */}

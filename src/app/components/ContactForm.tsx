@@ -89,7 +89,7 @@ const ContactForm = () => {
         email: false,
         message: false
       });
-    } catch (error) {
+    } catch {
       setFormStatus({
         submitted: false,
         error: true,
