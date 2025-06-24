@@ -14,19 +14,16 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - name: Install pnpm
-        run: npm install -g pnpm
-
       - uses: actions/setup-node@v4
         with:
           node-version: 18
-          cache: 'pnpm'
+          cache: 'npm'
 
       - name: Install dependencies
-        run: pnpm install
+        run: npm ci
 
       - name: Build & export
-        run: pnpm run build
+        run: npm run build
 
       - name: Create CNAME file
         run: echo 'valeford-preview.ghp.fled.dev' > ./out/CNAME
