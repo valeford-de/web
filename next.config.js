@@ -1,25 +1,25 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   // App Router is now stable in Next.js 14
-  output: 'export',
+  output: "export",
   trailingSlash: true,
-  distDir: 'out',
+  distDir: "out",
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
   // Fix asset paths for GitHub Pages deployment with custom domain
-  basePath: '',
-  assetPrefix: '',
+  basePath: "",
+  assetPrefix: "",
   // Optimize for static export
   swcMinify: true,
   // Ensure proper CSS handling for static export
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
+    removeConsole: process.env.NODE_ENV === "production",
   },
   // Disable server-side features for static export
   experimental: {
-    appDir: true
-  }
-}
+    appDir: true,
+  },
+};
 
-module.exports = nextConfig
+module.exports = nextConfig;

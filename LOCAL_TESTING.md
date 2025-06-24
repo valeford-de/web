@@ -18,6 +18,7 @@ npm run serve
 ```
 
 This will:
+
 1. Build the static export to the `out/` directory
 2. Start a local HTTP server on `http://localhost:3000`
 3. Serve all static assets with proper MIME types and CORS headers
@@ -45,6 +46,7 @@ The GitHub Actions workflow automatically handles deployment to GitHub Pages wit
 ### Troubleshooting
 
 **Port already in use?**
+
 ```bash
 # Find what's using port 3000
 lsof -i :3000
@@ -54,11 +56,13 @@ kill -9 <PID>
 ```
 
 **Assets not loading?**
+
 - Ensure you're accessing `http://localhost:3000` (not `file://`)
 - Check that the `out/` directory exists and contains the built files
 - Verify the build completed successfully with `npm run build`
 
 **Styling issues?**
+
 - Clear browser cache (Cmd+Shift+R on Mac, Ctrl+Shift+R on Windows/Linux)
 - Check browser developer tools for any remaining 404 errors
 - Ensure Tailwind CSS is properly compiled in the build output
