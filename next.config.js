@@ -1,22 +1,22 @@
 /** @type {import('next').NextConfig} */
-const isGitHubPages = process.env.GITHUB_PAGES === 'true';
+const isGitHubPages = process.env.GITHUB_PAGES === "true";
 
 const nextConfig = {
-  output: 'export',
+  output: "export",
   trailingSlash: true,
-  distDir: 'out',
+  distDir: "out",
   images: {
-    unoptimized: true
+    unoptimized: true,
   },
-  basePath: isGitHubPages ? '/web' : '',
-  assetPrefix: isGitHubPages ? '/web/' : '',
+  basePath: isGitHubPages ? "/web" : "",
+  assetPrefix: isGitHubPages ? "/web/" : "",
   swcMinify: true,
   compiler: {
-    removeConsole: process.env.NODE_ENV === 'production'
+    removeConsole: process.env.NODE_ENV === "production",
   },
   experimental: {
-    appDir: true
-  }
+    appDir: true,
+  },
 };
 
 module.exports = nextConfig;
