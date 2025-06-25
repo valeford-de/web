@@ -116,15 +116,11 @@ export default function Home() {
                 </div>
                 <div>
                   <div className="stat-number text-white">iOS</div>
-                  <div className="stat-label text-gray-300">
-                    Primary Focus
-                  </div>
+                  <div className="stat-label text-gray-300">Primary Focus</div>
                 </div>
                 <div>
                   <div className="stat-number text-white">2024</div>
-                  <div className="stat-label text-gray-300">
-                    Founded
-                  </div>
+                  <div className="stat-label text-gray-300">Founded</div>
                 </div>
               </motion.div>
             </div>
@@ -215,9 +211,7 @@ export default function Home() {
                     <span className="text-gray-600">Mobile-First</span>
                   </div>
                   <div className="flex justify-between items-center py-3">
-                    <span className="font-semibold text-gray-900">
-                      Vision
-                    </span>
+                    <span className="font-semibold text-gray-900">Vision</span>
                     <span className="text-gray-600">Long-term Value</span>
                   </div>
                 </div>
@@ -333,14 +327,16 @@ export default function Home() {
                 </div>
 
                 <div className="bg-gray-900 p-6 text-white">
-                  <h3 className="text-xl font-bold mb-4">
-                    Join Our Team
-                  </h3>
+                  <h3 className="text-xl font-bold mb-4">Join Our Team</h3>
                   <div className="space-y-4">
                     <p className="text-sm text-gray-300 mb-4">
-                      We're building the future of digital ventures. Join us as we grow.
+                      We're building the future of digital ventures. Join us as
+                      we grow.
                     </p>
-                    <Link href="/careers" className="inline-block bg-white text-gray-900 px-4 py-2 text-sm font-semibold hover:bg-gray-100 transition-colors">
+                    <Link
+                      href="/careers"
+                      className="inline-block bg-white text-gray-900 px-4 py-2 text-sm font-semibold hover:bg-gray-100 transition-colors"
+                    >
                       View Opportunities
                     </Link>
                   </div>
@@ -366,8 +362,8 @@ export default function Home() {
                   Have an idea? Pitch us.
                 </h2>
                 <p className="section-subtitle text-gray-300 mb-8">
-                  We're always looking for innovative digital ventures to build or invest in.
-                  Share your vision with us.
+                  We're always looking for innovative digital ventures to build
+                  or invest in. Share your vision with us.
                 </p>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <Link href="/contact" className="btn-accent">
@@ -394,9 +390,7 @@ export default function Home() {
                 <div className="text-white/60 text-sm font-semibold tracking-wide uppercase mb-2">
                   Contact
                 </div>
-                <div className="text-white text-lg mb-4">
-                  hello@valeford.de
-                </div>
+                <div className="text-white text-lg mb-4">hello@valeford.de</div>
                 <div className="text-white/60 text-sm">
                   Remote Team • Germany
                 </div>

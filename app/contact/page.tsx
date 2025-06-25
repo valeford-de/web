@@ -1,35 +1,39 @@
-'use client'
+"use client";
 
-import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { motion } from "framer-motion";
+import { useState } from "react";
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
-  transition: { duration: 0.6, ease: 'easeOut' }
-}
+  transition: { duration: 0.6, ease: "easeOut" },
+};
 
 export default function Contact() {
   const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    company: '',
-    subject: '',
-    message: ''
-  })
+    name: "",
+    email: "",
+    company: "",
+    subject: "",
+    message: "",
+  });
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    })
-  }
+      [e.target.name]: e.target.value,
+    });
+  };
 
   const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault()
+    e.preventDefault();
     // Handle form submission here
-    console.log('Form submitted:', formData)
-  }
+    console.log("Form submitted:", formData);
+  };
 
   return (
     <div className="pt-20">
@@ -42,11 +46,10 @@ export default function Contact() {
             transition={{ duration: 0.6 }}
             className="text-center max-w-4xl mx-auto"
           >
-            <h1 className="section-title text-gradient mb-6">
-              Get In Touch
-            </h1>
+            <h1 className="section-title text-gradient mb-6">Get In Touch</h1>
             <p className="section-subtitle mx-auto">
-              Ready to discuss your next venture or explore partnership opportunities? We'd love to hear from you.
+              Ready to discuss your next venture or explore partnership
+              opportunities? We'd love to hear from you.
             </p>
           </motion.div>
         </div>
@@ -64,12 +67,17 @@ export default function Contact() {
               viewport={{ once: true }}
               className="bg-white p-8 rounded-lg shadow-sm"
             >
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a message</h2>
-              
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                Send us a message
+              </h2>
+
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="name"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Full Name *
                     </label>
                     <input
@@ -83,9 +91,12 @@ export default function Contact() {
                       placeholder="Your full name"
                     />
                   </div>
-                  
+
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label
+                      htmlFor="email"
+                      className="block text-sm font-medium text-gray-700 mb-2"
+                    >
                       Email Address *
                     </label>
                     <input
@@ -100,9 +111,12 @@ export default function Contact() {
                     />
                   </div>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="company" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="company"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Company
                   </label>
                   <input
@@ -115,9 +129,12 @@ export default function Contact() {
                     placeholder="Your company name"
                   />
                 </div>
-                
+
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="subject"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Subject *
                   </label>
                   <select
@@ -136,9 +153,12 @@ export default function Contact() {
                     <option value="general">General Inquiry</option>
                   </select>
                 </div>
-                
+
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label
+                    htmlFor="message"
+                    className="block text-sm font-medium text-gray-700 mb-2"
+                  >
                     Message *
                   </label>
                   <textarea
@@ -152,16 +172,13 @@ export default function Contact() {
                     placeholder="Tell us about your project, partnership opportunity, or how we can help..."
                   />
                 </div>
-                
-                <button
-                  type="submit"
-                  className="w-full btn-primary"
-                >
+
+                <button type="submit" className="w-full btn-primary">
                   Send Message
                 </button>
               </form>
             </motion.div>
-            
+
             {/* Contact Information */}
             <motion.div
               initial={{ opacity: 0, x: 40 }}
@@ -171,12 +188,16 @@ export default function Contact() {
               className="space-y-8"
             >
               <div>
-                <h2 className="text-2xl font-bold text-gray-900 mb-6">Contact Information</h2>
+                <h2 className="text-2xl font-bold text-gray-900 mb-6">
+                  Contact Information
+                </h2>
                 <p className="text-lg text-gray-600 leading-relaxed mb-8">
-                  We're always interested in discussing new opportunities, partnerships, and innovative projects. Reach out to us through any of the channels below.
+                  We're always interested in discussing new opportunities,
+                  partnerships, and innovative projects. Reach out to us through
+                  any of the channels below.
                 </p>
               </div>
-              
+
               <div className="space-y-6">
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-valeford-blue/10 rounded-lg flex items-center justify-center mr-4">
@@ -185,51 +206,73 @@ export default function Contact() {
                   <div>
                     <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
                     <p className="text-gray-600">hello@valeford.de</p>
-                    <p className="text-sm text-gray-500">We typically respond within 24 hours</p>
+                    <p className="text-sm text-gray-500">
+                      We typically respond within 24 hours
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-valeford-blue/10 rounded-lg flex items-center justify-center mr-4">
                     <span className="text-valeford-blue text-xl">📍</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Location
+                    </h3>
                     <p className="text-gray-600">Berlin, Germany</p>
-                    <p className="text-sm text-gray-500">Available for meetings by appointment</p>
+                    <p className="text-sm text-gray-500">
+                      Available for meetings by appointment
+                    </p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-start">
                   <div className="w-12 h-12 bg-valeford-blue/10 rounded-lg flex items-center justify-center mr-4">
                     <span className="text-valeford-blue text-xl">💼</span>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Business Hours</h3>
-                    <p className="text-gray-600">Monday - Friday, 9:00 AM - 6:00 PM CET</p>
-                    <p className="text-sm text-gray-500">Emergency consultations available</p>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Business Hours
+                    </h3>
+                    <p className="text-gray-600">
+                      Monday - Friday, 9:00 AM - 6:00 PM CET
+                    </p>
+                    <p className="text-sm text-gray-500">
+                      Emergency consultations available
+                    </p>
                   </div>
                 </div>
               </div>
-              
+
               <div className="bg-white p-6 rounded-lg shadow-sm">
-                <h3 className="font-semibold text-gray-900 mb-4">What to expect:</h3>
+                <h3 className="font-semibold text-gray-900 mb-4">
+                  What to expect:
+                </h3>
                 <ul className="space-y-3">
                   <li className="flex items-start">
                     <span className="text-valeford-blue mr-3 mt-1">•</span>
-                    <span className="text-gray-600">Initial response within 24 hours</span>
+                    <span className="text-gray-600">
+                      Initial response within 24 hours
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-valeford-blue mr-3 mt-1">•</span>
-                    <span className="text-gray-600">Detailed project discussion call</span>
+                    <span className="text-gray-600">
+                      Detailed project discussion call
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-valeford-blue mr-3 mt-1">•</span>
-                    <span className="text-gray-600">Strategic assessment and recommendations</span>
+                    <span className="text-gray-600">
+                      Strategic assessment and recommendations
+                    </span>
                   </li>
                   <li className="flex items-start">
                     <span className="text-valeford-blue mr-3 mt-1">•</span>
-                    <span className="text-gray-600">Proposal for next steps</span>
+                    <span className="text-gray-600">
+                      Proposal for next steps
+                    </span>
                   </li>
                 </ul>
               </div>
@@ -252,37 +295,45 @@ export default function Contact() {
               Frequently Asked Questions
             </h2>
             <p className="section-subtitle mx-auto">
-              Common questions about working with Valeford and our venture development process.
+              Common questions about working with Valeford and our venture
+              development process.
             </p>
           </motion.div>
-          
+
           <div className="max-w-4xl mx-auto">
             <div className="grid md:grid-cols-2 gap-8">
               {[
                 {
                   question: "What types of projects do you work on?",
-                  answer: "We focus exclusively on mobile-first digital products with significant market potential. This includes mobile applications, mobile-optimized web platforms, and digital services designed for mobile users."
+                  answer:
+                    "We focus exclusively on mobile-first digital products with significant market potential. This includes mobile applications, mobile-optimized web platforms, and digital services designed for mobile users.",
                 },
                 {
-                  question: "How long does the venture development process take?",
-                  answer: "Our process typically takes 6-12 months from initial concept to market launch, depending on complexity. We start with 2-4 weeks of validation before moving to full development."
+                  question:
+                    "How long does the venture development process take?",
+                  answer:
+                    "Our process typically takes 6-12 months from initial concept to market launch, depending on complexity. We start with 2-4 weeks of validation before moving to full development.",
                 },
                 {
                   question: "Do you provide funding for ventures?",
-                  answer: "Yes, we provide both strategic guidance and funding for ventures that meet our criteria. We typically invest $100K-$500K in the initial development phase."
+                  answer:
+                    "Yes, we provide both strategic guidance and funding for ventures that meet our criteria. We typically invest $100K-$500K in the initial development phase.",
                 },
                 {
                   question: "Can you help with existing products?",
-                  answer: "Absolutely. We work with existing products that need strategic repositioning, technical improvements, or scaling support. We assess each situation individually."
+                  answer:
+                    "Absolutely. We work with existing products that need strategic repositioning, technical improvements, or scaling support. We assess each situation individually.",
                 },
                 {
                   question: "What's your typical partnership structure?",
-                  answer: "Partnership structures vary based on the project and client needs. We offer consulting, co-development, and equity partnership models depending on the situation."
+                  answer:
+                    "Partnership structures vary based on the project and client needs. We offer consulting, co-development, and equity partnership models depending on the situation.",
                 },
                 {
                   question: "Do you work with international clients?",
-                  answer: "Yes, we work with clients globally. While we're based in Berlin, we have experience working with teams across Europe, North America, and other regions."
-                }
+                  answer:
+                    "Yes, we work with clients globally. While we're based in Berlin, we have experience working with teams across Europe, North America, and other regions.",
+                },
               ].map((faq, index) => (
                 <motion.div
                   key={index}
@@ -292,7 +343,9 @@ export default function Contact() {
                   viewport={{ once: true }}
                   className="bg-gray-50 p-6 rounded-lg"
                 >
-                  <h3 className="font-semibold text-gray-900 mb-3">{faq.question}</h3>
+                  <h3 className="font-semibold text-gray-900 mb-3">
+                    {faq.question}
+                  </h3>
                   <p className="text-gray-600 leading-relaxed">{faq.answer}</p>
                 </motion.div>
               ))}
@@ -315,7 +368,9 @@ export default function Contact() {
               Ready to Start Your Venture?
             </h2>
             <p className="section-subtitle mb-8">
-              Let's discuss how we can help you build, validate, and scale your next digital product. Every great venture starts with a conversation.
+              Let's discuss how we can help you build, validate, and scale your
+              next digital product. Every great venture starts with a
+              conversation.
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center">
               <a href="#contact-form" className="btn-primary">
@@ -329,5 +384,5 @@ export default function Contact() {
         </div>
       </section>
     </div>
-  )
+  );
 }
