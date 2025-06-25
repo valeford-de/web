@@ -28,7 +28,7 @@ export default function Home() {
   return (
     <div>
       {/* Hero Section */}
-      <section className="relative min-h-screen flex items-center overflow-hidden">
+      <section className="hero-section relative min-h-screen flex items-center overflow-hidden pt-20 sm:pt-24">
         {/* Background Video or Static Background */}
         <div className="absolute inset-0 w-full h-full bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 z-0" />
         <AnimatePresence>

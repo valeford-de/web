@@ -89,4 +89,27 @@
   .animation-delay-600 {
     animation-delay: 600ms;
   }
+  
+  /* Mobile viewport height adjustments */
+  @media (max-height: 820px) and (max-width: 640px) {
+    .hero-section {
+      min-height: calc(100vh - 5rem);
+      padding-top: 6rem;
+    }
+  }
+  
+  @media (max-height: 700px) and (max-width: 640px) {
+    .hero-section {
+      min-height: calc(100vh - 4rem);
+      padding-top: 5rem;
+    }
+    
+    .hero-text {
+      @apply text-4xl sm:text-5xl;
+    }
+    
+    .section-subtitle {
+      @apply text-lg sm:text-xl;
+    }
+  }
 }
