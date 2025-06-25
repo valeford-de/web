@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cross-env GITHUB_PAGES=true next build && next export",
+    "build": "cross-env GITHUB_PAGES=true next build",
     "build:local": "next build && next export",
     "start": "next start",
     "lint": "next lint",
