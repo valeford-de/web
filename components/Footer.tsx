@@ -28,8 +28,7 @@ const navigation = {
   legal: [
     { name: 'Privacy Policy', href: '/legal/privacy' },
     { name: 'Terms of Service', href: '/legal/terms' },
-    { name: 'Investment Disclosures', href: '/legal/disclosures' },
-    { name: 'Regulatory Information', href: '/legal/regulatory' },
+    { name: 'Imprint', href: '/legal/imprint' },
     { name: 'Cookie Policy', href: '/legal/cookies' },
   ],
 }
@@ -58,15 +57,14 @@ export default function Footer() {
                 <h4 className="text-xs font-semibold text-white uppercase tracking-wide mb-2">
                   Contact
                 </h4>
-                <p className="text-sm text-gray-300">hello@valeford.com</p>
-                <p className="text-sm text-gray-300">+1 (555) 123-4567</p>
+                <p className="text-sm text-gray-300">hello@valeford.de</p>
               </div>
               
               <div>
                 <h4 className="text-xs font-semibold text-white uppercase tracking-wide mb-2">
-                  Offices
+                  Location
                 </h4>
-                <p className="text-sm text-gray-300">London • New York • San Francisco</p>
+                <p className="text-sm text-gray-300">Remote Team • Germany</p>
               </div>
             </div>
           </div>
@@ -170,11 +168,11 @@ export default function Footer() {
             
             <div className="lg:text-right">
               <h3 className="text-xs font-semibold text-white uppercase tracking-wide mb-4">
-                Regulatory Information
+                Company Information
               </h3>
               <p className="text-xs text-gray-400 leading-5">
-                Valeford is a registered investment adviser. All investments involve risk and may result in loss. 
-                Past performance does not guarantee future results.
+                Valeford UG (haftungsbeschränkt) is a German limited liability company.
+                All business activities are conducted in accordance with German law.
               </p>
             </div>
           </div>
@@ -185,17 +183,17 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row lg:items-center lg:justify-between">
             <div className="flex flex-col lg:flex-row lg:items-center space-y-2 lg:space-y-0 lg:space-x-8">
               <p className="text-xs text-gray-400">
-                &copy; {new Date().getFullYear()} Valeford UG. All rights reserved.
+                &copy; {new Date().getFullYear()} Valeford UG (haftungsbeschränkt). All rights reserved.
               </p>
               <p className="text-xs text-gray-400">
-                Registered in Germany • HRB 123456
+                Registered in Germany
               </p>
             </div>
             
             <div className="mt-4 lg:mt-0">
-              <p className="text-xs text-gray-400">
-                Member of German Venture Capital Association (BVK)
-              </p>
+              <Link href="/legal/imprint" className="text-xs text-gray-400 hover:text-gray-300 transition-colors">
+                Imprint
+              </Link>
             </div>
           </div>
         </div>
