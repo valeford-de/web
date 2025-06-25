@@ -2,7 +2,7 @@
 
 import { motion, AnimatePresence } from 'framer-motion'
 import Link from 'next/link'
-import { useVideo } from './layout'
+import { useVideo } from './contexts/VideoContext'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -18,6 +18,13 @@ const backgroundFade = {
 
 export default function Home() {
   const { videoEnabled } = useVideo()
+  
+  // Dynamic video path that works locally and on GitHub Pages
+  const getVideoPath = () => {
+    const assetPrefix = process.env.NEXT_PUBLIC_ASSET_PREFIX || ''
+    return `${assetPrefix}/videos/hero_8000.mp4`
+  }
+  
   return (
     <div>
       {/* Hero Section */}
@@ -41,7 +48,7 @@ export default function Home() {
                 playsInline
                 className="w-full h-full object-cover"
               >
-                <source src="/videos/hero_8000.mp4" type="video/mp4" />
+                <source src={getVideoPath()} type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             </motion.div>

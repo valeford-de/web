@@ -24,6 +24,8 @@ jobs:
 
       - name: Build & export
         run: npm run build
+        env:
+          NEXT_PUBLIC_ASSET_PREFIX: /web
 
       - name: Create CNAME file
         run: echo 'valeford-preview.ghp.fled.dev' > ./out/CNAME

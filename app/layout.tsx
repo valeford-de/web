@@ -1,41 +1,13 @@
 'use client'
 
-import React, { useState, createContext, useContext } from 'react'
+import React from 'react'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
+import { VideoProvider } from './contexts/VideoContext'
 
 const inter = Inter({ subsets: ['latin'] })
-
-interface VideoContextType {
-  videoEnabled: boolean
-  toggleVideo: () => void
-}
-
-const VideoContext = createContext<VideoContextType | undefined>(undefined)
-
-export const useVideo = () => {
-  const context = useContext(VideoContext)
-  if (context === undefined) {
-    throw new Error('useVideo must be used within a VideoProvider')
-  }
-  return context
-}
-
-function VideoProvider({ children }: { children: React.ReactNode }) {
-  const [videoEnabled, setVideoEnabled] = useState(true)
-
-  const toggleVideo = () => {
-    setVideoEnabled(!videoEnabled)
-  }
-
-  return (
-    <VideoContext.Provider value={{ videoEnabled, toggleVideo }}>
-      {children}
-    </VideoContext.Provider>
-  )
-}
 
 export default function RootLayout({
   children,

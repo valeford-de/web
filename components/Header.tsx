@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 import { Bars3Icon, XMarkIcon, VideoCameraIcon, VideoCameraSlashIcon } from '@heroicons/react/24/outline'
-import { useVideo } from '@/app/layout'
+import { useVideo } from '@/app/contexts/VideoContext'
 
 const navigation = [
   { name: 'Strategy', href: '/strategy' },
