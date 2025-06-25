@@ -4,7 +4,8 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "cross-env GITHUB_PAGES=true next build && next export",
+    "build:local": "next build && next export",
     "start": "next start",
     "lint": "next lint",
     "serve": "node serve.js",
@@ -26,6 +27,7 @@
     "eslint-config-next": "14.0.4",
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
-    "typescript": "^5"
+    "typescript": "^5",
+    "cross-env": "^7.0.3"
   }
 }
