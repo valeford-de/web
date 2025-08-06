@@ -28,18 +28,18 @@ jobs:
       - name: Setup Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
         with:
-          project_id: valeford-app  # ggf. anpassen
+          project_id: valeford-web
           service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
           export_default_credentials: true
 
       - name: Build & push Docker image
         run: |
-          gcloud builds submit --tag gcr.io/valeford-app/valeford-web
+          gcloud builds submit --tag gcr.io/valeford-web/valeford-web
 
       - name: Deploy to Cloud Run
         run: |
           gcloud run deploy valeford-web \
-            --image gcr.io/valeford-app/valeford-web \
+            --image gcr.io/valeford-web/valeford-web \
             --platform managed \
             --region europe-west1 \
             --allow-unauthenticated
