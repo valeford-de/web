@@ -22,7 +22,6 @@ This website showcases Valeford's approach to venture development, featuring a c
 - **Typography**: Inter font family
 - **Language**: TypeScript
 - **Deployment**: Vercel (recommended)
-- j
 
 ## Design System
 
