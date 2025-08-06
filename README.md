@@ -15,7 +15,7 @@ This website showcases Valeford's approach to venture development, featuring a c
 - **SEO Optimized**: Meta tags, structured data, and performance optimization
 
 ## Tech Stack
-
+n
 - **Framework**: Next.js 14 with App Router
 - **Styling**: Tailwind CSS
 - **Animations**: Framer Motion
