@@ -4,13 +4,17 @@ on:
   push:
     branches: [main]
 
+permissions:
+  contents: 'read'
+  id-token: 'write'
+
 jobs:
   deploy:
     name: Deploy to Cloud Run
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
       - name: Setup Node.js
@@ -19,18 +23,22 @@ jobs:
           node-version: '18'
           cache: 'npm'
 
-      - name: Install deps
+      - name: Install dependencies
         run: npm install
 
-      - name: Build app
+      - name: Build application
         run: npm run build
 
-      - name: Setup Google Cloud SDK
-        uses: google-github-actions/setup-gcloud@v2
+      - name: Authenticate with Google Cloud
+        uses: google-github-actions/auth@v2
         with:
           project_id: valeford-web
-          service_account_key: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          export_default_credentials: true
+          credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }}
+
+      - name: Set up Google Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+        with:
+          version: '>= 363.0.0'
 
       - name: Build & push Docker image
         run: |
