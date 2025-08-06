@@ -32,9 +32,7 @@ jobs:
       - name: Authenticate with Google Cloud
         uses: google-github-actions/auth@v2
         with:
-          project_id: valeford-web
           credentials_json: ${{ secrets.GCLOUD_SERVICE_KEY }}
-          impersonate_service_account: github-deploy@valeford-web.iam.gserviceaccount.com
 
       - name: Set up Google Cloud SDK
         uses: google-github-actions/setup-gcloud@v2
