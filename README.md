@@ -26,17 +26,20 @@ This website showcases Valeford's approach to venture development, featuring a c
 ## Design System
 
 ### Colors
+
 - **Primary**: Valeford Blue (#278FFF)
 - **Text**: Gray scale (900, 600, 400)
 - **Background**: White and Gray-50
 - **Accents**: Muted blue tones
 
 ### Typography
+
 - **Font**: Inter (Google Fonts)
 - **Hierarchy**: Clear typographic scale
 - **Readability**: Optimized line heights and spacing
 
 ### Components
+
 - **Buttons**: Primary and secondary variants
 - **Cards**: Subtle shadows and rounded corners
 - **Navigation**: Clean, minimal header with mobile menu
@@ -65,18 +68,20 @@ This website showcases Valeford's approach to venture development, featuring a c
 
 ### Prerequisites
 
-- Node.js 18+ 
+- Node.js 18+
 - npm or yarn
 
 ### Installation
 
 1. Clone the repository:
+
 ```bash
 git clone <repository-url>
 cd valeford-website
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 # or
@@ -84,6 +89,7 @@ yarn install
 ```
 
 3. Run the development server:
+
 ```bash
 npm run dev
 # or
@@ -102,28 +108,33 @@ npm start
 ## Pages
 
 ### Homepage (`/`)
+
 - Hero section with value proposition
 - Our approach overview
 - Focus areas highlighting mobile-first innovation
 - Call-to-action sections
 
 ### About (`/about`)
+
 - Company mission and values
 - Strategic approach overview
 - Team and culture information
 
 ### Ventures (`/ventures`)
+
 - Portfolio overview with key metrics
 - Featured venture case studies
 - Investment approach details
 
 ### Strategy (`/strategy`)
+
 - Strategic framework (Identify, Validate, Execute)
 - Investment criteria and metrics
 - Risk management approach
 - Success metrics and KPIs
 
 ### Contact (`/contact`)
+
 - Contact form with validation
 - Company information
 - FAQ section
@@ -132,7 +143,9 @@ npm start
 ## Customization
 
 ### Colors
+
 Update colors in `tailwind.config.js`:
+
 ```javascript
 colors: {
   'valeford-blue': '#278FFF',
@@ -141,12 +154,15 @@ colors: {
 ```
 
 ### Typography
+
 Modify font settings in `app/layout.tsx` and `tailwind.config.js`.
 
 ### Content
+
 Update page content in the respective files under `/app` directory.
 
 ### Animations
+
 Customize Framer Motion animations in component files.
 
 ## Performance
@@ -174,6 +190,7 @@ Customize Framer Motion animations in component files.
 ### Other Platforms
 
 The site can be deployed to any platform that supports Next.js:
+
 - Netlify
 - AWS Amplify
 - Digital Ocean App Platform
@@ -203,12 +220,14 @@ This project is proprietary and confidential. All rights reserved by Valeford.
 ## Support
 
 For technical support or questions about the website:
+
 - Email: hello@valeford.com
 - Documentation: This README file
 
 ## Changelog
 
 ### v1.0.0 (Initial Release)
+
 - Complete website with all core pages
 - Responsive design implementation
 - Performance optimization
