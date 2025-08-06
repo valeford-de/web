@@ -3,13 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
-    "build": "cross-env GITHUB_PAGES=true next build",
-    "build:local": "next build && next export",
-    "start": "next start",
-    "lint": "next lint",
-    "serve": "node serve.js",
-    "build:serve": "npm run build && npm run serve"
+    "build": "next build",
+    "start": "next start -p 8080"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
