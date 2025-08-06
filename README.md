@@ -13,7 +13,7 @@ This website showcases Valeford's approach to venture development, featuring a c
 - **Performance**: Built with Next.js 14 and optimized for speed
 - **Accessibility**: WCAG compliant with semantic HTML
 - **SEO Optimized**: Meta tags, structured data, and performance optimization
-
+k
 ## Tech Stack
 
 - **Framework**: Next.js 14 with App Router
