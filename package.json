@@ -4,12 +4,12 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "cross-env GITHUB_PAGES=true next build",
-    "build:local": "next build && next export",
+    "build:gh": "cross-env GITHUB_PAGES=true next build && next export",
+    "build:custom": "cross-env GITHUB_PAGES=false next build && next export",
     "start": "next start",
     "lint": "next lint",
     "serve": "node serve.js",
-    "build:serve": "npm run build && npm run serve"
+    "build:serve": "npm run build:custom && npm run serve"
   },
   "dependencies": {
     "@heroicons/react": "^2.2.0",
