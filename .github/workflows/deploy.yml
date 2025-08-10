@@ -23,7 +23,7 @@ jobs:
         run: npm install
 
       - name: Build & export
-        run: npm run build
+        run: npm run build:custom
         env:
           NEXT_PUBLIC_ASSET_PREFIX: /web
 
